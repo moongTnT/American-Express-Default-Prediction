@@ -6,6 +6,20 @@
 
 *2024.01.28 포트폴리오 목적으로  Readme 작성 후 업로드: 조문근*
 
+- [American Express-Default Prediction](#american-express-default-prediction)
+  * [Abstract](#abstract)
+  * [1 개요](#1---)
+    + [1.1 프로젝트의 특징과 기대되는 성과](#11------------------)
+    + [1.2 예상되는 리스크와 대응방안](#12---------------)
+  * [2 문제 정의](#2------)
+    + [2.1 성능의 평가](#21-------)
+  * [3 데이터 전처리](#3--------)
+    + [3.1 데이터 입출력](#31--------)
+    + [3.2 정규화 및 표준화, Feature Engineering](#32------------feature-engineering)
+  * [4 LightGBM](#4-lightgbm)
+  * [5 결과](#5---)
+  * [Reference](#reference)
+
 ## Abstract
 
 본 문서는 본인이 2021년 2학기 건국대학교 SW중심대학 장학활동으로 수행하였던 프로젝트의 요약본임. 이에 따라 결과보단 과정이 우선적으로 작성됨. 
@@ -66,3 +80,17 @@ $$
 ## 5 결과
 
 0.80의 성능 결과를 보여주었음. 1등의 확률이 0.80485..인 것과 확인할 수 있는 리더 보드도 모두 0.8에서 소수점 아래 셋째자리 경쟁인 것을 고려할 때 유의미하다고 판단됨. 이 이상의 성능 향상을 위한 시도는 1) 리소스 인풋 대비 아웃풋 2) 채점 데이터에 대한 과적합 측면을 고려하여 부적절하다고 판단하였음.
+
+
+## Reference 
+▶ **LightGBM**
+
+[1] Guolin Ke et al., “LightGBM: A Highly Efficient Gradient Boosting Decision Tree”, NIPS 2017
+
+▶ **데이터 병렬 입출력**
+
+[2] “multiprocessing - Process-based parallelism”, Python3 Documentation, https://docs.python.org/3/library/multiprocessing.
+
+▶ **정밀도 축소를 통한 성능 향상의 아이디어 도출**
+
+[3] Xiao Sun et al., “Ultra-Low Precision 4-bit Training of Deep Neural Networks”, NIPS 2020
